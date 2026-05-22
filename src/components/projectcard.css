@@ -1,0 +1,86 @@
+.project-card {
+  position: relative;
+
+  width: 100%;
+  height: 75vh;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(80, 255, 220, 0.08),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #041018,
+      #071d2b
+    );
+
+  border: 1px solid rgba(255,255,255,0.04);
+
+  transition:
+    transform 0.6s ease,
+    border-color 0.6s ease;
+}
+
+.project-card:hover {
+  transform: scale(0.985);
+
+  border-color:
+    rgba(120,255,230,0.2);
+}
+
+.project-overlay {
+  position: absolute;
+
+  bottom: 3rem;
+  left: 3rem;
+
+  z-index: 2;
+}
+
+.project-overlay p {
+  color: rgba(255,255,255,0.5);
+
+  font-size: 0.9rem;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 1rem;
+}
+
+.project-overlay h2 {
+  font-size: clamp(3rem, 7vw, 6rem);
+
+  line-height: 0.9;
+
+  color: white;
+}
+
+.view-project {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  color: rgba(255,255,255,0.9);
+
+  letter-spacing: 4px;
+
+  font-size: 1rem;
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+.project-card:hover .view-project {
+  opacity: 1;
+}
