@@ -18,11 +18,18 @@
 }
 
 .logo {
-  font-size: 1.2rem;
-  font-weight: 600;
-  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-
+.external-link {
+  display: flex;
+}
+.external-link img {
+  width: 24px;
+  height: auto;
+  display: block;
+}
 .nav-links {
   display: flex;
   gap: 3rem;

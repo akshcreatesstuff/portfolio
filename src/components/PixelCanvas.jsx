@@ -11,7 +11,7 @@ function PixelCanvas() {
     const cleanup =
       initImageMatrix(
         canvasRef.current,
-        "/Aishcropped.JPG"
+        "src/assets/Aishcropped.JPG"
       );
 
     return cleanup;
