@@ -2,7 +2,7 @@
   position: relative;
   overflow: hidden;
 
-  min-height: 100vh;
+  min-height: 90vh;
 
   display: flex;
   justify-content: space-between;
@@ -24,7 +24,9 @@
 .hero-left h1 {
   font-size: 5rem;
   line-height: 0.95;
-  font-weight: 700;
+  font-weight: 400;
+  display: inline-block;
+  position: relative;
 }
 
 .hero-left p {
@@ -32,7 +34,32 @@
   font-size: 1.3rem;
   color: #9ca3af;
 }
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
 
+@keyframes blink-cursor {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(141, 234, 217) }
+}
+
+.typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(141, 234, 217);
+  width: 100%;
+  animation: 
+    typing 2.5s steps(20, end) forwards,
+    blink-cursor 0.75s step-end infinite;
+}
+.name-highlight {
+  background: linear-gradient(90deg, #5fc0f5, #f8a4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
 .hero-left button {
   margin-top: 30px;
   padding: 16px 32px;
@@ -51,8 +78,8 @@
 /* RIGHT SIDE */
 
 .hero-right {
-  width: 45%;
-  height: 600px;
+  width: 40%;
+  height: 500px;
   overflow: visible;
 
   position: relative;
@@ -171,6 +198,7 @@
     opacity: 0.5;
   }
 }
+
 .portrait-glow {
 
   position: absolute;

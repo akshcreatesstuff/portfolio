@@ -7,6 +7,9 @@ function Navbar() {
     <nav className="navbar">
 
       <div className="logo">
+        <div className="logo-glow">
+        <a href="#hero">Aishwariya P S</a>
+        </div>
         <a
           className="external-link"
           href="https://www.linkedin.com/in/aishps/"
@@ -27,6 +30,7 @@ function Navbar() {
       
 
       <div className="nav-links">
+        <a href="#hero">Home</a>
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>

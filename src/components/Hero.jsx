@@ -1,9 +1,11 @@
+import { useEffect, useState, useRef } from "react";
 import "./Hero.css";
 import PixelCanvas from "./PixelCanvas";
 
 function Hero() {
+
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="noise"></div>
 
       {/* Aurora Background */}
@@ -13,17 +15,18 @@ function Hero() {
       <div className="stars"></div>
 
       <div className="hero-left">
-        <h1>Hi ! I'm Aishwariya.</h1>
+        <h1>
+          <span className="typewriter">hi ! I'm <span className="name-highlight">Aishwariya.</span>
+          </span>
+        </h1>
 
         <p>Senior Consultant at Deloitte & Space Enthusiast.</p>
-        
       </div>
 
       <div className="hero-right">
         <div className="portrait-glow"></div>
-          <PixelCanvas />
+        <PixelCanvas />
       </div>
-
     </section>
   );
 }

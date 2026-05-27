@@ -1,64 +1,105 @@
 .about {
-
   min-height: 100vh;
-
-  padding:
-    12rem 8%;
-
-  display: flex;
-  justify-content: space-between;
-  gap: 6rem;
-
+  padding: 5rem 8%;
   background: #07121c;
+  color: white;
 }
 
-.about-left {
-  flex: 1;
+/* heading */
+.about-heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
 }
 
-.about-right {
-  flex: 1;
+.about-heading h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0.9;
+}
 
+.about-divider {
+  flex: 1;
+  max-width: 300px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* body — text left, image right */
+.about-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+/* text */
+.about-text {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-
-  padding-top: 6rem;
+  gap: 1.8rem;
+  max-width: 680px;
+  font-family: 'Courier New', monospace;
 }
 
-.about-label {
-
-  font-size: 0.9rem;
-
-  letter-spacing: 3px;
-
-  opacity: 0.5;
-
-  margin-bottom: 2rem;
-}
-
-.about h2 {
-
-  font-size: clamp(
-    2rem,
-    4vw,
-    4rem
-  );
-
-  line-height: 1.05;
-
-  font-weight: 500;
-
-  max-width: 700px;
-}
-
-.about-right p {
-
+.about-text p {
   font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.75);
+  text-align: justify;
+}
 
-  line-height: 1.8;
+.about-text strong {
+  color: white;
+  font-weight: 600;
+}
 
-  opacity: 0.75;
+.highlight-green {
+  color: #4ade80;
+  font-weight: 500;
+}
 
-  max-width: 500px;
+/* skills grid — two columns like Gazi's */
+.about-skills {
+  display: flex;
+  gap: 3rem;
+}
+
+.about-skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.about-skills ul li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.65);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-skills ul li::before {
+  content: "▹";
+  color: #8886f3;
+  font-size: 0.75rem;
+}
+
+/* image */
+.about-image-wrap {
+  flex: 0 0 auto;
+}
+
+.about-image {
+  width: 280px;
+  height: 300px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  display: block;
 }

@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-
+import portrait from "../assets/Aishcropped.JPG";
 import { initImageMatrix } from "../engine/imageMatrix";
 
 function PixelCanvas() {
@@ -11,7 +11,7 @@ function PixelCanvas() {
     const cleanup =
       initImageMatrix(
         canvasRef.current,
-        "src/assets/Aishcropped.JPG"
+        portrait
       );
 
     return cleanup;
