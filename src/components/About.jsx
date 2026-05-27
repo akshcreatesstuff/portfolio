@@ -10,6 +10,9 @@ function About() {
       </div>
 
       <div className="about-body">
+         <div className="about-image-wrap">
+          <img src="src/assets/apabout.jpg" alt="Aishwariya" className="about-image" />
+        </div>
 
         <div className="about-text">
           <p>
@@ -27,8 +30,6 @@ function About() {
               <li>Salesforce Marketing Cloud</li>
               <li>Salesforce Sales Cloud</li>
               <li>Apex</li>
-            </ul>
-            <ul>
               <li>Python</li>
               <li>Copado Robotics Tool</li>
               <li>SOQL</li>
@@ -40,10 +41,6 @@ function About() {
             <span className="highlight-blue">space enthusiast</span>, passionate
             about world economics, history nerd and loves playing Clash Royale.
           </p>
-        </div>
-
-        <div className="about-image-wrap">
-          <img src="src/assets/apabout.jpg" alt="Aishwariya" className="about-image" />
         </div>
 
       </div>

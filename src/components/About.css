@@ -41,7 +41,7 @@
   flex-direction: column;
   gap: 1.8rem;
   max-width: 680px;
-  font-family: 'Courier New', monospace;
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .about-text p {
@@ -57,11 +57,11 @@
 }
 
 .highlight-green {
-  color: #4ade80;
+  color: #a8c7f3;
   font-weight: 500;
 }
 
-/* skills grid — two columns like Gazi's */
+
 .about-skills {
   display: flex;
   gap: 3rem;
