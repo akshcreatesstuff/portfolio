@@ -27,7 +27,7 @@
   background: rgba(255, 255, 255, 0.15);
 }
 
-/* body — text left, image right */
+
 .about-body {
   display: flex;
   align-items: flex-start;

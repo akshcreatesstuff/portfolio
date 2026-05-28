@@ -64,13 +64,13 @@
   margin-top: 30px;
   padding: 16px 32px;
 
-  border: none;
+  border: 1px solid #7ac7fa;
   border-radius: 10px;
 
-  background: #c791fa;
+  background: #e9e5ec;
 
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
 
   cursor: pointer;
 }

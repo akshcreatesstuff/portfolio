@@ -21,6 +21,7 @@ function Hero() {
         </h1>
 
         <p>Senior Consultant at Deloitte & Space Enthusiast.</p>
+        <button className="contact-button" onClick={() => window.location.href = "mailto:aishpswork@gmail.com"}>Say hi!</button>
       </div>
 
       <div className="hero-right">

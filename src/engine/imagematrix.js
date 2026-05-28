@@ -3,7 +3,7 @@ export function initImageMatrix(canvas, imageSrc) {
   let animationId;
   let mouse = { x: -999, y: -999 };
 
-  const symbols = ["0", "1", "<>", "/", "{}", "[]", "#", "*", "=>", "&&"];
+  const symbols = ["<>", "/", "{}", "[]", "#", "*", "=>", "&&"];
 
   const handleMouseMove = (e) => {
     const rect = canvas.getBoundingClientRect();
@@ -79,7 +79,7 @@ export function initImageMatrix(canvas, imageSrc) {
             baseY,
             char: symbols[Math.floor(Math.random() * symbols.length)],
             size: 4,
-            delay: Math.floor(Math.random() * 100),   // staggered arrival
+            delay: Math.floor(Math.random() * 80),   // staggered arrival
             opacity: 0,
           });
         }
@@ -102,11 +102,11 @@ export function initImageMatrix(canvas, imageSrc) {
       const dx = mouse.x - p.baseX;
       const dy = mouse.y - p.baseY;
       const dist = Math.sqrt(dx * dx + dy * dy);
-      const radius = 120;
+      const radius = 60;
       const force = Math.max(0, radius - dist) / radius;
       const angle = Math.atan2(p.baseY - mouse.y, p.baseX - mouse.x);
-      const repelX = Math.cos(angle) * force * 50;
-      const repelY = Math.sin(angle) * force * 50;
+      const repelX = Math.sin(angle) * force * 50;
+      const repelY = Math.cos(angle) * force * 50;
 
       const targetX = p.baseX + repelX;
       const targetY = p.baseY + repelY;
@@ -119,8 +119,8 @@ export function initImageMatrix(canvas, imageSrc) {
       const distToBase = Math.sqrt(
         (p.x - p.baseX) ** 2 + (p.y - p.baseY) ** 2
       );
-      p.opacity = Math.min(1, p.opacity + 0.02);
-      const flicker = 0.6 + Math.random() * 0.4;
+      p.opacity = Math.min(1, p.opacity + 0.01);
+      const flicker = 0.9 + Math.random() * 0.5;
 
       ctx.font = `${p.size}px monospace`;
       ctx.fillStyle = `rgba(0, 165, 250, ${p.opacity * flicker})`;
