@@ -10,8 +10,8 @@ function Works() {
       </p>
 
       <ProjectCard
-        title="Image Matrix"
-        category="Creative Coding"
+        title="Lead Intelligence"
+        category="Salesforce Automation leveraging VertexAI"
       />
 
     </section>
