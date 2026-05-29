@@ -1,0 +1,42 @@
+.experience {
+  min-height: 100vh;
+  padding: 5rem 8%;
+  background: #07121c;
+  color: white;
+}
+.section-title  {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.section-title h2 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+.section-title .experience-divider {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;      
+}
+.experience-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.experience-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.experience-item p {
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+}       

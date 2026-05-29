@@ -1,10 +1,13 @@
-function ProjectCard({ title, category }) {
+function ProjectCard({ title, category, link, img }) {
 
   return (
 
     <div className="project-card">
 
-      <div className="project-image"></div>
+      <div
+        className="project-image"
+        style={img ? { backgroundImage: `url('${img}')` } : {}}
+      ></div>
 
       <div className="project-glow"></div>
 
@@ -17,7 +20,9 @@ function ProjectCard({ title, category }) {
       </div>
 
       <div className="view-project">
-        VIEW PROJECT
+         <a href={link} target="_blank" rel="noopener noreferrer">
+          VIEW PROJECT
+        </a>
       </div>
 
     </div>
