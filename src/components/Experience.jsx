@@ -5,7 +5,7 @@ const experienceItems = [
   {
     id: "deloitte",
     title: "Deloitte USI, India",
-    role: "Senior Consultant @ Deloitte USI, India",
+    role: "Senior Consultant",
     period: "Nov 2021 - Present",
     details: [
       "Led a team of 7 QA Engineers to implement and test Salesforce Financial Service Cloud solutions for a major US bank, ensuring high-quality deliverables and client satisfaction.",
@@ -21,7 +21,7 @@ const experienceItems = [
   {
     id: "nagarro",
     title: "Nagarro, India",
-    role: "Senior Engineer @ Nagarro, India",
+    role: "Senior Engineer",
     period: "Feb 2021 - Nov 2021",
     details:[
       "Led and mentored a team of 7 members to create custom solutions for customer self-booking on Salesforce Community Cloud in the Shipping and logistics industry",
@@ -33,7 +33,7 @@ const experienceItems = [
   {
     id: "keysight",
     title: "Keysight Technologies",
-    role: "Business Process Analyst @ Keysight Technologies, India",
+    role: "Business Process Analyst",
     period: "June 2018 - Feb 2021",
     details:[
       "Led a team of 5 members to implement and test Siebel decommissioning and adopt Salesforce Service Cloud for customer service support, resulting in a 40% reduction in case resolution time.",
@@ -83,7 +83,7 @@ function Experience() {
         </ul>
         {selected && (
             <div className="experience-details" key= {activeExperience}>
-              <h3>{selected.role}</h3>
+              <h3>{selected.role} @ <span className= "titleColor" >{selected.title}</span></h3>
               <p className="experience-period">{selected.period}</p>
               {Array.isArray(selected.details) ? (
                 <ul className="experience-details-list">

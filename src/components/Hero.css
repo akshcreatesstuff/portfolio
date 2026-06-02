@@ -67,11 +67,11 @@
   border: 1px solid #7ac7fa;
   border-radius: 10px;
 
-  background: #2c3a3a;
+  background: #020814;
 
   font-size: 1rem;
   font-weight: 500;
-
+  color: #7ac7fa;
   cursor: pointer;
 }
 
