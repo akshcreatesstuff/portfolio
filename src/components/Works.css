@@ -65,7 +65,7 @@
 .project-overlay h2 {
 
     font-size:
-        clamp(3rem, 7vw, 6rem);
+        clamp(1rem, 3vw, 4rem);
 
     line-height: 0.9;
 
@@ -181,7 +181,6 @@
     opacity: 0.9;  
 }
 .section-divider {
-    
     flex: 1;
     height: 1px;
     background: rgba(255, 255, 255, 0.15);

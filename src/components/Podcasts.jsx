@@ -10,21 +10,25 @@ const podcastItems = [
   },
 ];
 function Podcasts() {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(null);
 
   return (
     <div className = "podcasts-section">
     <div className="podcastItems" id="podcasts">
       <div className="podcasts-header">
         <h2>/ podcasts</h2>
-        <span className="section-divider"></span>
+        <span className="podcast-divider"></span>
       </div>
 
       <div className="podcast-player">
-        <audio key={podcastItems[selected].title} controls autoPlay>
-          <source src={podcastItems[selected].audioSrc} type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+        {selected !== null ? (
+          <audio key={podcastItems[selected].title} controls autoPlay>
+            <source src={podcastItems[selected].audioSrc} type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        ) : (
+          <p className="podcast-player-placeholder">Select a podcast to play</p>
+        )}
       </div>
 
       <div className="podcast-list">
