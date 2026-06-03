@@ -9,15 +9,20 @@ import Experience from "./components/Experience";
 
 function App() {
   return (
-    <>
-      <Aurora />
-      <Navbar />
-      <Hero />
-      <About />
-      <Experience />
-      <Works />
-      <Podcasts />
-    </>
+    <div className="app-shell">
+      <main className="app-content">
+        <Aurora />
+        <Navbar />
+        <Hero />
+        <About />
+        <Experience />
+        <Works />
+        <Podcasts />
+      </main>
+      <footer className="website-footer">
+        <p>Built by Aksh. All rights reserved. &copy;</p>
+      </footer>
+    </div>
   );
 }
 

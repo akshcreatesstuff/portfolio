@@ -123,11 +123,11 @@ function Podcasts() {
         />
         ) : (
           <div className="podcast-placeholder">
-            <p>Select a podcast to play</p>
+            <p>select a podcast to play ♡</p>
           </div>
         )}
       </div>
-    
+
     </div>
     </div>
   );
