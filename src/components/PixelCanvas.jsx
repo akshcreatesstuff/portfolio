@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
-import { initImageMatrix } from "../engine/imageMatrix";
+import { initImageMatrix } from "../engine/imagematrix";
 
 function PixelCanvas() {
 
