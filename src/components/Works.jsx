@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react";
 import "./Works.css";
 import ProjectCard from "./ProjectCard";
-import leadIntelImg from "../assets/leadintelprojimg.png";
+const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
+
 
 const projectItems = [
   {
     title: "Lead Intelligence",
     category: "Salesforce Automation leveraging VertexAI",
     link: "https://github.com/akshcreatesstuff/Lead-Intelligence",
-    img: leadIntelImg,
+    img: ASSET_BASE + "/assets/leadintelprojimg.png",
   },
   {
     title: "Salesforce Data Clean & Upload",
     category: "A lightweight Flask microservice that cleans, validates, and uploads data to Salesforce",
     link: "https://github.com/akshcreatesstuff/salesforce-data-cleaner",
+    img: "",
   }
 ];
 
@@ -69,7 +71,7 @@ function Works() {
                 title={project.title}
                 category={project.category}
                 link={project.link}
-                img={project.img}
+                img={ASSET_BASE + "/assets/leadintelprojimg.png"}
               />
             </div>
           ))}

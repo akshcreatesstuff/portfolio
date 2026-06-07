@@ -161,6 +161,25 @@
   }
 }
 
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-content {
+  flex: 1 0 auto;
+}
+
+.website-footer {
+  flex-shrink: 0;
+  padding: 2rem 1rem 1.5rem;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  background: #07121c;
+}
+
 .ticks {
   position: relative;
   width: 100%;

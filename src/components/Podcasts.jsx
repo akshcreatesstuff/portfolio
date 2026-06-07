@@ -1,14 +1,14 @@
 import { useState, useEffect, useRef} from "react";
 import "./Podcasts.css";
-import expansionAudio from "../assets/podclips/Expansion of the universe.mp3";
-import expansionImg from "../assets/expansionOfUni.png";
+
+const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
 
 const podcastItems = [
   {
     title: "Expansion of the Universe",
     description: "A deep dive into the mysteries of the cosmos and the ever-expanding universe.",
-    audioSrc: expansionAudio,
-    imgSrc: expansionImg,
+    audioSrc: ASSET_BASE + "/assets/podclips/Expansion of the universe.mp3",
+    imgSrc: ASSET_BASE + "/assets/expansionOfUni.png",
   },
 ];
 function AudioPlayer({ src, title }) {
@@ -123,11 +123,11 @@ function Podcasts() {
         />
         ) : (
           <div className="podcast-placeholder">
-            <p>Select a podcast to play</p>
+            <p>select a podcast to play ♡</p>
           </div>
         )}
       </div>
-    
+
     </div>
     </div>
   );
