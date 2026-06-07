@@ -38,6 +38,7 @@ export function initImageMatrix(canvas, imageSrc) {
 });
 
   const img = new Image();
+  img.crossOrigin = "anonymous";
   img.src = imageSrc;
   const pixels = [];
 

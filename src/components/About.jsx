@@ -1,4 +1,5 @@
 import "./About.css";
+const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
 
 function About() {
   return (
@@ -11,7 +12,7 @@ function About() {
 
       <div className="about-body">
          <div className="about-image-wrap">
-          <img src="src/assets/apabout.jpg" alt="Aishwariya" className="about-image" />
+          <img src={ASSET_BASE + "/assets/apabout.jpg"} alt="Aishwariya" className="about-image" />
         </div>
 
         <div className="about-text">
@@ -27,12 +28,13 @@ function About() {
           <div className="about-skills">
             <ul>
               <li>Salesforce</li>
-              <li>Salesforce Marketing Cloud</li>
+              <li>Agentic AI</li>
               <li>Salesforce Sales Cloud</li>
               <li>Apex</li>
               <li>Python</li>
               <li>Copado Robotics Tool</li>
               <li>SOQL</li>
+              <li>Prompt Engineering</li>
             </ul>
           </div>
 

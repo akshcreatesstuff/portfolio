@@ -1,6 +1,7 @@
 import "./Navbar.css";
-import linkedinImg from "../assets/linkedin.png";
-import githubImg from "../assets/git.png";
+const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
+const linkedinImg = ASSET_BASE + "/assets/linkedin.png";
+const githubImg = ASSET_BASE + "/assets/git.png";
 
 function Navbar() {
   return (

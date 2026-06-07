@@ -1,17 +1,16 @@
 import { useEffect, useRef } from "react";
-import portrait from "../assets/Aishcropped.JPG";
+const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
 import { initImageMatrix } from "../engine/imageMatrix";
 
 function PixelCanvas() {
 
   const canvasRef = useRef();
-
   useEffect(() => {
 
     const cleanup =
       initImageMatrix(
         canvasRef.current,
-        portrait
+        ASSET_BASE + "/assets/Aishcropped.JPG"
       );
 
     return cleanup;
