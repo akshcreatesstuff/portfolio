@@ -2,14 +2,15 @@ import { useEffect, useState, useRef } from "react";
 import "./Hero.css";
 import PixelCanvas from "./PixelCanvas";
 const ASSET_BASE = import.meta.env.VITE_ASSET_BASE_URL;
-const [email, setEmail] = useState("");
+
+function Hero() {
+  const [email, setEmail] = useState("");
 
 useEffect(() => {
-  fetch(`${ASSET_BASE}/info.json`)
+  fetch(`${ASSET_BASE}/assets/PIAssets/info.json`)
     .then(res => res.json())
     .then(data => setEmail(data.email));
 }, []);
-function Hero() {
 
   return (
     <section className="hero" id="hero">
@@ -29,7 +30,7 @@ function Hero() {
 
         <p>Senior Consultant at Deloitte & Space Enthusiast.</p>
         <button className="contact-button"  onClick={() => {
-            window.location.href = `mailto:${email}`;}}>
+            window.location.href = `mailto:${email}`}}>
               Say hi!
         </button>
       </div>
