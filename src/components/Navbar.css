@@ -2,24 +2,38 @@
   position: fixed;
   top: 0;
   left: 0;
+
   width: 100%;
+
   padding: 1rem 6%;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  z-index: 100;
+
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+
   backdrop-filter: blur(10px);
+
+  z-index: 100;
+
+  background: rgba(2, 8, 20, 0.6);
 }
+
+/* ======================
+   LOGO
+====================== */
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
+
 .logo-glow a {
   font-size: 1rem;
   font-weight: 500;
+
   color: white;
   text-decoration: none;
 
@@ -27,32 +41,104 @@
 
   transition: 0.3s;
 }
+
 .logo-glow a:hover {
   opacity: 1;
-  text-shadow: 0 0 5px #fff, 0 0
 }
+
 .external-link {
   display: flex;
 }
+
 .external-link img {
   width: 24px;
   height: auto;
   display: block;
 }
+
+/* ======================
+   LINKS
+====================== */
+
 .nav-links {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.8rem;
+
+  font-size: 0.85rem;
   opacity: 0.7;
 
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
 }
 
 .nav-links a:hover {
   opacity: 1;
+}
+
+/* ======================
+   TABLET
+====================== */
+
+@media (max-width: 1024px) {
+
+  .navbar {
+    padding: 1rem 4%;
+  }
+
+  .logo-glow a {
+    font-size: 0.95rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+  }
+
+  .external-link img {
+    width: 20px;
+  }
+}
+
+/* ======================
+   MOBILE
+====================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0.8rem 2rem;
+  }
+
+  .logo {
+    gap: 0.5rem;
+  }
+
+  .logo-glow a {
+    font-size: 0.85rem;
+  }
+
+  .external-link img {
+    width: 18px;
+  }
+
+  .nav-links {
+    gap: 0.7rem;
+
+    flex-wrap: wrap;
+    justify-content: flex-end;
+
+    max-width: 60%;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+  }
 }
