@@ -11,7 +11,7 @@ const podcastItems = [
     imgSrc: ASSET_BASE + "/assets/expansionOfUni.png",
   },
 ];
-function AudioPlayer({ src, title }) {
+function AudioPlayer({ src, title, onClose }) {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -80,9 +80,14 @@ function AudioPlayer({ src, title }) {
           onChange={handleSeek}
         />
         <span className="custom-player-time">{formatTime(duration)}</span>
-        <span className="custom-player-end" onClick={() => setSelected(null)}>
+        <button
+          className="custom-player-end"
+          type="button"
+          onClick={onClose}
+          aria-label="Close player"
+        >
           x
-        </span>
+        </button>
       </div>
     </div>
   );
@@ -120,6 +125,7 @@ function Podcasts() {
           key={podcastItems[selected].title}
           src={podcastItems[selected].audioSrc}
           title={podcastItems[selected].title}
+          onClose={() => setSelected(null)}
         />
         ) : (
           <div className="podcast-placeholder">

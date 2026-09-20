@@ -171,12 +171,16 @@
   cursor: pointer;
 }
 .custom-player-end {
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 0.25rem;
+  background: transparent;
+  border: 0;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.4);
     flex-shrink: 0;
     cursor: pointer;
+  padding: 0;
+}
+
+.custom-player-end:hover {
+  color: white;
 }
